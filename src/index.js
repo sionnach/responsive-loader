@@ -6,12 +6,14 @@ const loaderUtils = require('loader-utils');
 const MIMES = {
   'jpg': 'image/jpeg',
   'jpeg': 'image/jpeg',
-  'png': 'image/png'
+  'png': 'image/png',
+  'webp': 'image/webp'
 };
 
 const EXTS = {
   'image/jpeg': 'jpg',
-  'image/png': 'png'
+  'image/png': 'png',
+  'image/webp': 'webp'
 };
 
 type Config = {
@@ -29,7 +31,7 @@ type Config = {
   background: string | number | void,
   placeholder: string | boolean | void,
   adapter: ?Function,
-  format: 'png' | 'jpg' | 'jpeg',
+  format: 'png' | 'jpg' | 'jpeg' | 'webp',
   disable: ?boolean,
 };
 
